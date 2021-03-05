@@ -9,7 +9,7 @@
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/advanced-stencil/advanced-stencil.esm.js",
+  "unpkg": "dist/ian-advanced-stencil/ian-advanced-stencil.esm.js",
   "files": [
     "dist/",
     "loader/"
