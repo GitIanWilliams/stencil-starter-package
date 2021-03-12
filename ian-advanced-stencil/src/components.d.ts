@@ -6,6 +6,14 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface UcCompChild {
+    }
+    interface UcCompGrandparent {
+        "name": string;
+    }
+    interface UcCompParent {
+        "name": string;
+    }
     interface UcSpinner {
     }
     interface UcStockFinder {
@@ -15,6 +23,24 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLUcCompChildElement extends Components.UcCompChild, HTMLStencilElement {
+    }
+    var HTMLUcCompChildElement: {
+        prototype: HTMLUcCompChildElement;
+        new (): HTMLUcCompChildElement;
+    };
+    interface HTMLUcCompGrandparentElement extends Components.UcCompGrandparent, HTMLStencilElement {
+    }
+    var HTMLUcCompGrandparentElement: {
+        prototype: HTMLUcCompGrandparentElement;
+        new (): HTMLUcCompGrandparentElement;
+    };
+    interface HTMLUcCompParentElement extends Components.UcCompParent, HTMLStencilElement {
+    }
+    var HTMLUcCompParentElement: {
+        prototype: HTMLUcCompParentElement;
+        new (): HTMLUcCompParentElement;
+    };
     interface HTMLUcSpinnerElement extends Components.UcSpinner, HTMLStencilElement {
     }
     var HTMLUcSpinnerElement: {
@@ -34,12 +60,23 @@ declare global {
         new (): HTMLUcStockPriceElement;
     };
     interface HTMLElementTagNameMap {
+        "uc-comp-child": HTMLUcCompChildElement;
+        "uc-comp-grandparent": HTMLUcCompGrandparentElement;
+        "uc-comp-parent": HTMLUcCompParentElement;
         "uc-spinner": HTMLUcSpinnerElement;
         "uc-stock-finder": HTMLUcStockFinderElement;
         "uc-stock-price": HTMLUcStockPriceElement;
     }
 }
 declare namespace LocalJSX {
+    interface UcCompChild {
+    }
+    interface UcCompGrandparent {
+        "name"?: string;
+    }
+    interface UcCompParent {
+        "name"?: string;
+    }
     interface UcSpinner {
     }
     interface UcStockFinder {
@@ -49,6 +86,9 @@ declare namespace LocalJSX {
         "stockSymbol"?: string;
     }
     interface IntrinsicElements {
+        "uc-comp-child": UcCompChild;
+        "uc-comp-grandparent": UcCompGrandparent;
+        "uc-comp-parent": UcCompParent;
         "uc-spinner": UcSpinner;
         "uc-stock-finder": UcStockFinder;
         "uc-stock-price": UcStockPrice;
@@ -58,6 +98,9 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "uc-comp-child": LocalJSX.UcCompChild & JSXBase.HTMLAttributes<HTMLUcCompChildElement>;
+            "uc-comp-grandparent": LocalJSX.UcCompGrandparent & JSXBase.HTMLAttributes<HTMLUcCompGrandparentElement>;
+            "uc-comp-parent": LocalJSX.UcCompParent & JSXBase.HTMLAttributes<HTMLUcCompParentElement>;
             "uc-spinner": LocalJSX.UcSpinner & JSXBase.HTMLAttributes<HTMLUcSpinnerElement>;
             "uc-stock-finder": LocalJSX.UcStockFinder & JSXBase.HTMLAttributes<HTMLUcStockFinderElement>;
             "uc-stock-price": LocalJSX.UcStockPrice & JSXBase.HTMLAttributes<HTMLUcStockPriceElement>;

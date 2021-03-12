@@ -1,15 +1,15 @@
 {
-  "name": "ian-advanced-stencil",
-  "version": "1.0.0",
+  "name": "ian-advanced-starter",
+  "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
+  "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
-  "types": "dist/types/components.d.ts",
+  "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/advanced-stencil/advanced-stencil.esm.js",
+  "unpkg": "dist/ian-advanced-starter/ian-advanced-starter.esm.js",
   "files": [
     "dist/",
     "loader/"
@@ -23,7 +23,9 @@
   },
   "dependencies": {
     "@stencil/core": "^2.0.1",
-    "@stencil/sass": "^1.4.1"
+    "@stencil/redux": "^0.2.0",
+    "@stencil/sass": "^1.4.1",
+    "redux": "^4.0.5"
   },
   "license": "MIT"
 }
