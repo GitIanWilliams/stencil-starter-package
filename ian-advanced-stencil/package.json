@@ -1,6 +1,6 @@
 {
-  "name": "ian-advanced-starter",
-  "version": "0.0.1",
+  "name": "ian-advanced-stencil",
+  "version": "1.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
@@ -9,7 +9,7 @@
   "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/ian-advanced-starter/ian-advanced-starter.esm.js",
+  "unpkg": "dist/ian-advanced-stencil/ian-advanced-stencil.esm.js",
   "files": [
     "dist/",
     "loader/"
