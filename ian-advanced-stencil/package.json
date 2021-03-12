@@ -27,5 +27,11 @@
     "@stencil/sass": "^1.4.1",
     "redux": "^4.0.5"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/puppeteer": "^5.4.2",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "puppeteer": "^5.5.0"
+  }
 }
